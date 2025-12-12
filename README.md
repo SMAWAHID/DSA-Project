@@ -259,10 +259,10 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 
 -----
 
-\<div align="center"\>
-\<b\>Built with ❤️ for introverts, by an introvert.\</b\><br>
+<div align="center"\>
+<b\>Built with ❤️ for introverts, by an introvert.</b\><br>
 ⭐ If you found this helpful, please give it a star\! ⭐
-\</div\>
+<div\>
 
 ```
 ```
