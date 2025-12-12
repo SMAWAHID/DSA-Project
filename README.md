@@ -282,7 +282,7 @@ Time Complexity: O((V + E) log V) where V = nodes, E = edges
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 👨‍💻 Author
-[Your Name]
+[Syed Mawahid Hussain]
 
 📧 Email: your.email@example.com
 💼 LinkedIn: linkedin.com/in/yourprofile
