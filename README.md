@@ -253,7 +253,7 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 **Syed Mawahid Hussain**
 & **Umais Ahmed**
 
-  * 💼 LinkedIn: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/syed-mawahid-hussain-ab951b180/)
+  * 💼 LinkedIn: [Syed Mawahid](https://www.linkedin.com/in/syed-mawahid-hussain-ab951b180/)
   * 📧 Email: k241041@nu.edu.pk & k241003@nu.edu.pk
   * 🐙 GitHub: [@SMawahid](https://github.com/SMAWAHID)
 
