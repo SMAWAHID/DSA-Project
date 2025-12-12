@@ -144,13 +144,12 @@ make
 
 ### Main Window Layout
 
-\<img width="100%" alt="Main Window Interface" src="https://github.com/user-attachments/assets/7f8dc94a-8492-47ef-85ce-1847644c6475" /\>
+<img width="1914" height="1014" alt="Screenshot 2025-12-12 171023" src="https://github.com/user-attachments/assets/42e2ec74-1275-4cff-a108-15d03746a02e" />
 
 ### Floor Layout & Visualization
 
-[Image of detailed indoor floor map]
+<img width="1454" height="850" alt="Screenshot 2025-12-12 171052" src="https://github.com/user-attachments/assets/6f137c38-e7a8-40ef-b345-efd8ae3a3795" />
 
-\<img width="80%" alt="Floor Layout" src="https://github.com/user-attachments/assets/07dae5b1-a8f1-4f30-bf69-0831a803dbaf" /\>
 
 -----
 
