@@ -1,6 +1,4 @@
-Here is the fully formatted, modern `README.md` file based on the detailed content you provided. I have organized it with badges, tables, and proper Markdown styling to make it look professional on GitHub.
 
-You can copy and paste this directly into your `README.md` file.
 
 ````markdown
 <div align="center">
