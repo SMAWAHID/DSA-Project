@@ -1,6 +1,4 @@
 
-
-````markdown
 <div align="center">
 
   <h1>🗺️ FAST NUCES Navigation System</h1>
