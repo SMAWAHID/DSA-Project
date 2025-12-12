@@ -1,3 +1,8 @@
+Here is the fully formatted, modern `README.md` file based on the detailed content you provided. I have organized it with badges, tables, and proper Markdown styling to make it look professional on GitHub.
+
+You can copy and paste this directly into your `README.md` file.
+
+````markdown
 <div align="center">
 
   <h1>🗺️ FAST NUCES Navigation System</h1>
@@ -88,3 +93,181 @@
 ```bash
 git clone [https://github.com/YourUsername/FAST-NUCES-Navigation.git](https://github.com/YourUsername/FAST-NUCES-Navigation.git)
 cd FAST-NUCES-Navigation
+````
+
+**Step 2: Create Build Directory**
+
+```bash
+mkdir build && cd build
+```
+
+**Step 3: Build the Project**
+
+```bash
+cmake ..
+make
+# Or use 'cmake --build .' on Windows
+```
+
+**Step 4: Run the Application**
+
+```bash
+./FAST-NUCES-Navigation
+```
+
+*Alternatively, open `CMakeLists.txt` in Qt Creator and click **Run**.*
+
+-----
+
+## 📖 How to Use
+
+### Basic Navigation
+
+1.  **Select Starting Location**
+      * Choose building from "Source Area".
+      * Select specific room from "Location".
+2.  **[Optional] Add Intermediate Stop**
+      * Choose "Via Area" and location if you want to stop somewhere in between.
+3.  **Select Destination**
+      * Choose target building and room from "Dest Area".
+4.  **Find Route**
+      * Click **Search**.
+      * The map will highlight the path, and the red dot will animate your walk.
+      * Text instructions will appear in the sidebar.
+
+### Controls
+
+  * **Zoom:** Mouse scroll wheel.
+  * **Pan:** Click and drag on the map.
+  * **Switch Floors:** Click the tabs at the top (e.g., `EE Building` → `EE-A`, `EE-B`).
+  * **Global View:** Click the `Outdoor Map` tab.
+
+-----
+
+## 🎨 User Interface
+
+### Main Window Layout
+
+\<img width="100%" alt="Main Window Interface" src="https://github.com/user-attachments/assets/7f8dc94a-8492-47ef-85ce-1847644c6475" /\>
+
+### Floor Layout & Visualization
+
+[Image of detailed indoor floor map]
+
+\<img width="80%" alt="Floor Layout" src="https://github.com/user-attachments/assets/07dae5b1-a8f1-4f30-bf69-0831a803dbaf" /\>
+
+-----
+
+## 🧠 How It Works
+
+### 1\. Data Layer (CSV)
+
+The system loads `data/campus_map_detailed.csv` on startup.
+
+```csv
+SECTION 1: NODES
+EE-Lab-1, 120, 100  <-- Node ID, X, Y
+
+SECTION 2: EDGES
+EE-Lab-1, EE-Hall-A, 15  <-- From, To, Weight (Distance)
+```
+
+### 2\. Graph Construction
+
+  * Parses CSV to create **Nodes** with visual coordinates.
+  * Builds an **Adjacency List** where every room knows its neighbors and the distance to them.
+
+### 3\. Pathfinding Engine (Dijkstra)
+
+1.  **Init:** Set Start distance to 0, all others to Infinity.
+2.  **Priority Queue:** Explore the closest unexplored node.
+3.  **Relax:** If a new path to a neighbor is shorter, update the distance.
+4.  **Reconstruct:** Trace breadcrumbs backwards from Destination to Start.
+
+### 4\. Visualization & Animation
+
+  * **QGraphicsScene:** Draws the static map layout.
+  * **QSequentialAnimationGroup:** Creates a sequence of movements. The person icon moves from Node A to Node B, then B to C, automatically switching scenes if the floor changes.
+
+-----
+
+## 🏗️ Project Structure
+
+```text
+FAST-NUCES-Navigation/
+├── CMakeLists.txt        # Build configuration
+├── README.md             # Documentation
+├── data/
+│   └── campus_map.csv    # The map database
+├── include/              # Header files
+│   ├── core/             # CampusGis logic
+│   ├── graph/            # Graph & Dijkstra algo
+│   ├── gui/              # MainWindow & UI logic
+│   └── trees/            # LocationTree hierarchy
+├── src/                  # Source files (.cpp)
+└── resources/            # Images and QRC assets
+```
+
+-----
+
+## ⚙️ Configuration
+
+**Adding New Rooms:**
+Simply edit `data/campus_map_detailed.csv`. You do not need to recompile C++ code to add simple nodes\!
+
+```csv
+New-Room-Name, 500, 300
+New-Room-Name, Existing-Hallway, 10
+```
+
+**Customizing Colors:**
+Colors are defined in `src/gui/MainWindow.cpp`. You can modify the hex codes in `drawFloorSchematic()` to match your branding.
+
+-----
+
+## 🚀 Future Roadmap
+
+  * 📱 **Mobile Application** (iOS/Android port using Qt Quick).
+  * 🔥 **Heatmaps** for real-time crowd density.
+  * ♿ **Accessibility Mode** (Prioritize elevators over stairs).
+  * 🌐 **Web Interface** (WASM build).
+  * ⏱️ **ETA Estimation** based on average walking speed.
+
+-----
+
+## 🤝 Contributing
+
+Contributions are welcome\! Please follow these steps:
+
+1.  Fork the repository.
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add AmazingFeature'`).
+4.  Push to the branch.
+5.  Open a Pull Request.
+
+-----
+
+## 📝 License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+-----
+
+## 👨‍💻 Author
+
+**Syed Mawahid Hussain**
+& **Umais Ahmed**
+
+  * 💼 LinkedIn: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/syed-mawahid-hussain-ab951b180/)
+  * 📧 Email: k241041@nu.edu.pk & k241003@nu.edu.pk
+  * 🐙 GitHub: [@SMawahid](https://github.com/SMAWAHID)
+
+-----
+
+\<div align="center"\>
+\<b\>Built with ❤️ for introverts, by an introvert.\</b\><br>
+⭐ If you found this helpful, please give it a star\! ⭐
+\</div\>
+
+```
+```
